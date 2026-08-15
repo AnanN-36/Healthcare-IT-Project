@@ -1,37 +1,38 @@
-# June: Vulnerable Population, Data Fields, and Evidence Synthesis
+# June: Evidence Synthesis, Policy References, and Phase 0 Evaluation
 
 ## Research mission
 
-Build a traceable evidence base for the population context and data fields that a Heat Risk Dashboard may need. Keep the work descriptive and evidence-led, without requiring deep clinical or technical expertise.
+Build a traceable evidence base that helps the team justify the project, compare sources, identify gaps, and define how a Phase 0 roadmap or prototype should be evaluated. Keep the work descriptive and evidence-led, without requiring deep clinical or production-IT expertise.
 
 ## What to collect
 
-- Heat-vulnerable groups, with emphasis on older adults and people with chronic conditions.
-- Non-clinical or minimally clinical factors relevant to operational prioritization: age band, condition category, living alone, cooling access, mobility, or support needs.
-- Evidence about barriers to receiving heat warnings or support.
-- User needs for residents, caregivers, community health workers, public health officers, and facilities.
-- Data minimization, consent, privacy, equity, and bias considerations for mock data.
-- Gaps, contradictions, and source-quality issues across the collected evidence.
+- WHO, public-health, climate-health, digital health, implementation, or policy references that support the Heat Risk Dashboard concept.
+- Evidence that heat risk creates operational coordination problems, not only clinical problems.
+- Evaluation examples for dashboards, warning systems, public-health digital tools, or pilot initiatives.
+- Implementation or Phase 0 planning examples: scope, stakeholders, readiness, feasibility, risks, and roadmap assumptions.
+- Source quality, limitations, contradictions, and evidence gaps across all team streams.
+- Matrix-ready statements that are clearly tied to source evidence.
 
 ## Out of scope
 
-- Diagnosing a person or recommending treatment.
-- Building a complete patient registry.
-- Assigning real-world risk scores without a qualified local authority.
+- Acting as the final clinical reviewer.
+- Making production technical decisions.
+- Filling gaps by inventing evidence where the sources are weak.
 
 ## Expected research output
 
-- A vulnerable-population profile and evidence table.
-- A minimum data-field list for mock cases.
-- A persona and user-need summary.
-- A cross-source evidence-gap and assumption summary.
+- A policy and literature source inventory.
+- A cross-source evidence matrix.
+- A source-quality and evidence-gap summary.
+- Phase 0 feasibility assumptions and roadmap dependencies.
+- Prototype evaluation measures linked to evidence.
 
 ## NotebookLM prompt
 
 For each source, use the shared source-summary prompt and add:
 
 ```text
-Focus on populations vulnerable to heat and the information needed for operational outreach prioritization. Extract population definitions, relevant vulnerability factors, barriers, equity implications, and data-minimization considerations. Distinguish evidence from assumptions and note source quality or disagreement. Do not produce diagnosis or treatment advice.
+Focus on evidence synthesis, policy relevance, implementation feasibility, Phase 0 planning, roadmap assumptions, and prototype evaluation for a Heat Risk Dashboard. Extract claims, evidence strength, source limitations, contradictions, relevant metrics, and gaps. Distinguish evidence from assumptions and do not invent unsupported claims.
 ```
 
 Then combine all per-source summaries into `June_literature_review.md` using the shared literature-review prompt.
@@ -39,4 +40,4 @@ Then combine all per-source summaries into `June_literature_review.md` using the
 ## File rule
 
 Keep original files unchanged in this folder. Name files clearly, for example:
-`June_source_01_vulnerable_groups.pdf`, `June_source_02_equity_notes.md`, or `June_evidence_review_notes.md`.
+`June_source_01_policy_reference.pdf`, `June_source_02_evaluation_framework.md`, or `June_evidence_review_notes.md`.

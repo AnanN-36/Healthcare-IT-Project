@@ -1,8 +1,8 @@
-# My: Heat-Risk Indicators and Data Sources
+# My: Heat-Risk Indicators, Data Sources, and Backend Ingestion Feasibility
 
 ## Research mission
 
-Identify what heat-risk information a dashboard needs, where it can come from, and how it can be integrated into a usable IT workflow without pretending to provide weather prediction or clinical diagnosis.
+Identify what heat-risk information a dashboard needs, where it can come from, and how a backend could fetch, refresh, validate, and hand it to the dashboard without pretending to provide weather prediction or clinical diagnosis.
 
 ## What to collect
 
@@ -11,7 +11,7 @@ Identify what heat-risk information a dashboard needs, where it can come from, a
 - Definitions, units, update frequency, coverage, and known limitations for each indicator.
 - Existing alert levels or thresholds, clearly marking whether they are official, illustrative, or context-dependent.
 - Data quality issues such as missingness, latency, spatial resolution, and conflicting sources.
-- Practical integration considerations: API or file format, update mechanism, identifiers, and handoff to the dashboard.
+- Practical backend ingestion considerations: API or file format, update mechanism, identifiers, caching, validation, error handling, and handoff to the dashboard.
 
 ## Out of scope
 
@@ -25,14 +25,14 @@ Identify what heat-risk information a dashboard needs, where it can come from, a
 - A data dictionary for the proposed dashboard.
 - A comparison of candidate data sources.
 - A recommendation for mock-data fields and an update cadence.
-- A short data-integration feasibility note for the prototype.
+- A short backend ingestion feasibility note for the prototype.
 
 ## NotebookLM prompt
 
 For each source, use the shared source-summary prompt and add:
 
 ```text
-Focus on heat-risk indicators, data usability, and integration feasibility. Extract each indicator's definition, unit, time horizon, geographic level, source, update frequency, threshold or alert interpretation, limitations, format, and update mechanism. Separate officially defined information from illustrative or inferred rules. Do not convert heat metrics into clinical advice.
+Focus on heat-risk indicators, data usability, and backend ingestion feasibility. Extract each indicator's definition, unit, time horizon, geographic level, source, update frequency, threshold or alert interpretation, limitations, format, update mechanism, identifiers, validation needs, and failure handling. Separate officially defined information from illustrative or inferred rules. Do not convert heat metrics into clinical advice.
 ```
 
 Then combine all per-source summaries into `My_literature_review.md` using the shared literature-review prompt.

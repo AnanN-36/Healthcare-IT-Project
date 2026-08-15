@@ -1,36 +1,38 @@
-# Com: Stakeholders, Contact Points, and Handoff Channels
+# Com: IT Architecture, Data Model, Integration, and Governance Controls
 
 ## Research mission
 
-Map who needs to communicate with whom around a heat-risk alert and what information or handoff should cross each contact point. Use a health and public-health coordination lens, but keep the stream at contact-point level; it does not design detailed workflows for the five supporting components.
+Define the conceptual technical structure that connects source data, mock vulnerable-population context, dashboard views, alerts, and governance controls for a Phase 0 Heat Risk Dashboard prototype.
 
 ## What to collect
 
-- Stakeholders involved in heat-risk communication and response.
-- Existing contact channels: dashboard notification, phone, SMS, LINE, email, radio, public announcement, or other locally relevant channels.
-- Information that must be handed off at each contact point.
-- Ownership and acknowledgement expectations at a high level.
-- Communication barriers, language needs, digital access, and failure fallback channels.
+- High-level architecture patterns for dashboards that combine environmental, operational, and health-context data.
+- Logical data model or schema examples for dashboard-friendly data: area, time, indicator, alert level, vulnerable group, action status, source freshness.
+- Integration boundaries between data ingestion, processing, storage, dashboard frontend, notification layer, and audit/logging.
+- Identity, access control, audit trail, data retention, source traceability, and data-quality controls.
+- Governance, privacy, security, ownership, and accountability requirements relevant to a roadmap-level prototype.
 
 ## Out of scope
 
-- Detailed clinical, hospital, emergency, or community-health workflows.
-- Selecting a final communications vendor.
-- Assuming that a digital channel reaches every vulnerable person.
+- Writing production code or selecting a final cloud or software vendor.
+- Making legal or compliance claims without authoritative local review.
+- Building a complete health information system.
+- Designing detailed workflows for the five supporting components.
 
 ## Expected research output
 
-- A stakeholder and contact-point map.
-- A contact-point / handoff matrix.
-- A primary channel plus fallback channel for each interaction.
-- A short list of coordination risks and unresolved questions.
+- A conceptual architecture diagram or component list.
+- A logical data model and dashboard data object list.
+- An integration-boundary and data-flow list.
+- An access, audit, source-traceability, and governance checklist.
+- A Phase 0 technical feasibility note with assumptions and dependencies.
 
 ## NotebookLM prompt
 
 For each source, use the shared source-summary prompt and add:
 
 ```text
-Focus on stakeholders, communication channels, handoffs, ownership, acknowledgement, and fallback mechanisms relevant to heat-risk response. Extract who contacts whom, what information is transferred, through which channel, and what can fail. Keep this at contact-point level; do not design detailed operational or clinical workflows.
+Focus on IT architecture, logical data model, integration boundaries, interoperability, data quality, access control, audit, traceability, governance, security, privacy, and Phase 0 technical feasibility for a Heat Risk Dashboard. Separate requirements, recommendations, evidence, and assumptions. Do not claim legal compliance or production readiness from this source alone.
 ```
 
 Then combine all per-source summaries into `Com_literature_review.md` using the shared literature-review prompt.
@@ -38,4 +40,4 @@ Then combine all per-source summaries into `Com_literature_review.md` using the 
 ## File rule
 
 Keep original files unchanged in this folder. Name files clearly, for example:
-`Com_source_01_stakeholder_map.pdf`, `Com_source_02_communication_channels.md`, or `Com_interview_notes_YYYY-MM-DD.md`.
+`Com_source_01_architecture.pdf`, `Com_source_02_data_model.md`, or `Com_governance_notes_YYYY-MM-DD.md`.

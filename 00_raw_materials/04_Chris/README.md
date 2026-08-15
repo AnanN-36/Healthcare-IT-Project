@@ -1,38 +1,38 @@
-# Chris: Dashboard UX, Visualization, Accessibility, and Adoption
+# Chris: Stakeholders, Communication Logistics, Adoption, and CSAT-Style Evaluation
 
 ## Research mission
 
-Study how heat-risk information can be presented so that users can understand urgency, location, affected groups, and next action quickly, while also considering adoption, satisfaction, and communication patterns familiar from CSAT SaaS and marketing work.
+Study how heat-risk information moves through people, service touchpoints, communication channels, and feedback loops so that the roadmap can explain adoption, logistics, and usefulness beyond the screen itself.
 
 ## What to collect
 
-- Examples of heat, emergency, public-health, or risk dashboards.
-- Visualization patterns for maps, trends, alert levels, counts, task status, and data freshness.
-- User-interface needs for desktop and mobile use in operational settings.
-- Accessibility and plain-language requirements for public-sector or community users.
-- Common dashboard usability problems: alarm fatigue, excessive detail, unclear status, misleading color, or missing context.
-- Adoption and satisfaction signals: comprehension, task completion, trust, feedback, and reasons users may ignore or abandon a dashboard.
+- Stakeholders involved in heat-risk communication and response.
+- Contact points between dashboard users, public health teams, community workers, facilities, residents, caregivers, and local organizations.
+- Communication channels: dashboard notification, phone, SMS, LINE, email, public announcement, or other locally relevant channels.
+- Service logistics: acknowledgement, escalation, fallback channel, response delay, handoff ownership, and coordination friction.
+- Adoption and satisfaction signals: comprehension, trust, message usefulness, task completion, user feedback, and reasons users may ignore or abandon the service.
+- Plain-language and accessibility considerations for messages, not only visual screens.
 
 ## Out of scope
 
-- Producing the final visual design before the research is synthesized.
-- Building all six pages of a complete system.
-- Treating color alone as the alert mechanism.
+- Designing detailed clinical, hospital, emergency, or community-health workflows.
+- Selecting a final communications vendor.
+- Assuming a digital channel reaches every vulnerable person.
 
 ## Expected research output
 
-- A dashboard pattern and feature comparison.
-- A proposed information hierarchy for the Heat Risk Dashboard.
-- A list of essential widgets and their purpose.
-- Accessibility and visualization rules for the prototype.
-- A small set of user-adoption or satisfaction measures for evaluating the prototype.
+- A stakeholder journey and contact-point map.
+- A contact-point / handoff / channel matrix.
+- Primary and fallback channels for key interactions.
+- A short list of service-logistics risks and adoption barriers.
+- CSAT-style prototype evaluation measures for usefulness, trust, and clarity.
 
 ## NotebookLM prompt
 
 For each source, use the shared source-summary prompt and add:
 
 ```text
-Focus on dashboard UX, information hierarchy, visualization, accessibility, adoption, satisfaction, and decision-oriented presentation. Extract what a user needs to see, compare, filter, or act on. Identify risks of misleading visualization, alarm fatigue, low trust, or poor adoption. Translate findings into prototype requirements and evaluation measures without inventing new evidence.
+Focus on stakeholders, communication logistics, contact points, channels, handoffs, ownership, acknowledgement, fallback mechanisms, adoption, satisfaction, and service usefulness. Extract who contacts whom, what information is transferred, through which channel, what can fail, and how users might evaluate the service. Keep this at contact-point level; do not design detailed operational or clinical workflows.
 ```
 
 Then combine all per-source summaries into `Chris_literature_review.md` using the shared literature-review prompt.
@@ -40,4 +40,4 @@ Then combine all per-source summaries into `Chris_literature_review.md` using th
 ## File rule
 
 Keep original files unchanged in this folder. Name files clearly, for example:
-`Chris_source_01_dashboard_case.pdf`, `Chris_source_02_accessibility_guidance.md`, or `Chris_comparable_tool_notes.md`.
+`Chris_source_01_stakeholder_journey.pdf`, `Chris_source_02_communication_channels.md`, or `Chris_csat_adoption_notes.md`.
