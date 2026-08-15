@@ -2,6 +2,14 @@
 
 This repository is organized as a pipeline from rough project materials to prototype-ready inputs.
 
+For the current Heat Risk Dashboard initiative, follow:
+
+- `01_general_workflow/heat_risk_dashboard_research_workflow.md`
+- `01_general_workflow/team_work_allocation.md`
+- `02_analyzed_data_notebooklm/notebooklm_prompt_playbook.md`
+
+The project has one main component, the Heat Risk Dashboard. The five other components remain supporting content at contact-point and handoff level during this course phase.
+
 ```mermaid
 flowchart LR
     A["00 Raw Materials"] --> B["01 General Workflow"]

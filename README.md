@@ -13,3 +13,9 @@ Use the numbered folders as a research-to-prototype pipeline:
 5. `04_production_inputs/` - cleaned data used for prototype or pitch production
 
 See `docs/project-workflow.md` for the full working process.
+
+Current team instructions:
+
+- `01_general_workflow/heat_risk_dashboard_research_workflow.md` - end-to-end workflow and project boundary
+- `01_general_workflow/team_work_allocation.md` - six-member research allocation
+- `02_analyzed_data_notebooklm/notebooklm_prompt_playbook.md` - prompts for source summaries and literature reviews
