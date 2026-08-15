@@ -1,40 +1,40 @@
-# Mod: Scope, IT Use Case, and Product Requirements
+# Mod: IT Architecture, Governance, and Phase 0 Feasibility
 
 ## Research mission
 
-Define the problem and the minimum IT initiative that the team will propose:
+Define the high-level IT structure and governance boundary for the initiative:
 
 > Heat Risk Dashboard: a digital dashboard that translates heat-risk information into actionable, coordinated health-related operations.
 
-Keep the project focused on IT enablement and operational support. Do not turn this stream into a clinical guideline or a complete healthcare information system.
+Keep the work at roadmap and conceptual-architecture level. Do not turn this stream into a production architecture, legal opinion, or clinical guideline.
 
 ## What to collect
 
-- Evidence that heat alerts do not automatically become coordinated health actions.
-- Existing heat-risk dashboards, alerting systems, or public-sector digital tools.
-- User problems that a dashboard could address: awareness, prioritization, task visibility, escalation, or reporting.
-- Minimum viable dashboard capabilities and non-goals.
-- Examples of implementation or roadmap language suitable for a Phase 0 initiative.
+- High-level architecture patterns for dashboards that combine heat-risk data with health or community context.
+- Data flow, integration boundaries, interoperability, identity, access control, audit, and retention considerations.
+- Governance, privacy, security, ownership, and accountability requirements.
+- Measures of usefulness such as timeliness, coverage, acknowledgement, usability, and equity.
+- Pilot, implementation, or Phase 0 planning examples and dependencies.
 
 ## Out of scope
 
-- Designing a clinical treatment protocol.
-- Building a production system or selecting a final vendor.
-- Deep investigation of all five supporting components.
+- Writing production code or selecting a final cloud or software vendor.
+- Making legal or compliance claims without authoritative local review.
+- Designing detailed workflows for the five supporting components.
 
 ## Expected research output
 
-- A short problem statement with evidence.
-- A list of dashboard users and their top decisions.
-- A must-have / should-have / out-of-scope feature list.
-- A proposed initiative statement and success definition.
+- A conceptual data-flow and integration-boundary list.
+- A risk and governance checklist.
+- A small evaluation framework for the prototype or pilot.
+- A Phase 0 roadmap with assumptions, dependencies, and next decisions.
 
 ## NotebookLM prompt
 
 For each source, use the shared source-summary prompt and add:
 
 ```text
-Focus on the source's implications for a Heat Risk Dashboard as an IT and operational-support initiative. Extract the problem gap, users, decisions, dashboard capabilities, implementation constraints, and any evidence that supports or challenges the proposed scope. Do not invent clinical recommendations.
+Focus on the source's implications for IT architecture, data governance, interoperability, security, evaluation, implementation dependencies, and Phase 0 feasibility for a Heat Risk Dashboard. Separate requirements, recommendations, evidence, and assumptions. Do not claim legal compliance or production readiness from this source alone.
 ```
 
 Then combine all per-source summaries into `Mod_literature_review.md` using the shared literature-review prompt.
@@ -42,4 +42,4 @@ Then combine all per-source summaries into `Mod_literature_review.md` using the 
 ## File rule
 
 Keep original files unchanged in this folder. Name files clearly, for example:
-`Mod_source_01_title.pdf`, `Mod_source_02_title.md`, or `Mod_meeting_notes_YYYY-MM-DD.md`.
+`Mod_source_01_architecture.pdf`, `Mod_source_02_governance.md`, or `Mod_phase0_notes_YYYY-MM-DD.md`.

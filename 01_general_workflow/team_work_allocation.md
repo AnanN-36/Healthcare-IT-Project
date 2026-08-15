@@ -2,12 +2,12 @@
 
 | Member | Research stream | Main question | Output used by the team |
 |---|---|---|---|
-| Mod | Scope, IT use case, product requirements | What is the smallest credible Heat Risk Dashboard initiative? | Problem statement, feature scope, success definition |
-| My | Heat-risk indicators and data sources | What heat-risk data can the dashboard use and what are its limitations? | Data dictionary, source comparison, mock-data fields |
-| Belle | Vulnerable population and data fields | What population context is relevant for operational prioritization? | User needs, minimum fields, equity and privacy considerations |
-| Chris | Dashboard UX, visualization, accessibility | How should users understand risk and next action quickly? | Information hierarchy, widgets, visualization and accessibility rules |
+| Mod | IT architecture, governance, and Phase 0 feasibility | What makes the initiative technically and operationally feasible? | Data-flow boundaries, governance checklist, evaluation, and roadmap |
+| My | Heat-risk indicators, data sources, and integration feasibility | What heat-risk data can the dashboard use and how can it reach the dashboard? | Data dictionary, source comparison, mock-data fields, integration note |
+| Belle | IT use case, user needs, and product requirements | What is the smallest credible Heat Risk Dashboard initiative for its users? | Problem statement, feature scope, acceptance criteria, and success definition |
+| Chris | Dashboard UX, visualization, accessibility, and adoption | How should users understand, trust, and use risk information quickly? | Information hierarchy, widgets, visualization, accessibility, and adoption measures |
 | Com | Stakeholders, contact points, handoff channels | Who communicates with whom and what information is handed off? | Contact-point map, channel matrix, fallback options |
-| June | Architecture, governance, evaluation, Phase 0 | What makes the initiative technically and operationally feasible? | Data-flow boundaries, governance checklist, evaluation and roadmap |
+| June | Vulnerable population, data fields, and evidence synthesis | What population context is relevant for operational prioritization? | User needs, minimum fields, equity and privacy considerations, evidence gaps |
 
 ## Shared boundaries
 

@@ -4,12 +4,12 @@ Store original, unprocessed materials here. Each team member has an assigned res
 
 ## Team folders
 
-- `01_Mod/` - scope, IT use case, and product requirements
-- `02_My/` - heat-risk indicators and data sources
-- `03_Belle/` - vulnerable population and dashboard data fields
-- `04_Chris/` - dashboard UX, visualization, and accessibility
+- `01_Mod/` - IT architecture, governance, and Phase 0 feasibility
+- `02_My/` - heat-risk indicators, data sources, and integration feasibility
+- `03_Belle/` - IT use case, user needs, and product requirements
+- `04_Chris/` - dashboard UX, visualization, accessibility, and adoption
 - `05_Com/` - stakeholders, contact points, and handoff channels
-- `06_June/` - IT architecture, governance, evaluation, and Phase 0 feasibility
+- `06_June/` - vulnerable population, data fields, and evidence synthesis
 
 Examples:
 

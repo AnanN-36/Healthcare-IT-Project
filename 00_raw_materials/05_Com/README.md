@@ -2,7 +2,7 @@
 
 ## Research mission
 
-Map who needs to communicate with whom around a heat-risk alert and what information or handoff should cross each contact point. This stream covers coordination only; it does not design detailed workflows for the five supporting components.
+Map who needs to communicate with whom around a heat-risk alert and what information or handoff should cross each contact point. Use a health and public-health coordination lens, but keep the stream at contact-point level; it does not design detailed workflows for the five supporting components.
 
 ## What to collect
 
