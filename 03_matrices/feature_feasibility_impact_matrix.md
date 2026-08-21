@@ -1,0 +1,27 @@
+# Feature Feasibility-Impact Matrix
+
+**Purpose:** prioritize what HeatShield should demonstrate in Phase 0 and defer what requires live data, clinical validation, or institutional authority.  
+**Scope:** retrospective Heat Risk Dashboard plus mock workflow simulator.  
+**Updated:** 2026-08-21
+
+| Feature or capability | User problem addressed | Impact | Phase 0 feasibility | Evidence / Interpretation / Assumption / Decision | Decision and traceability |
+|---|---|---:|---:|---|---|
+| Historical heat-health trend view | Users need to interpret burden and trends over time | High | High | Evidence: Mod and June support historical heat-health framing. Interpretation: retrospective trends are appropriate for Pitch 1. | **Decision:** Must-have. Trace: Mod review; June notes; integrated brief sections 4 and 6. |
+| Source, unit, timestamp, and coverage display | Users may misinterpret values without context | High | High | Evidence: My identifies provenance and quality fields. Interpretation: metadata is part of the product, not backend-only detail. | **Decision:** Must-have. Trace: My review; Com review. |
+| Data quality and freshness flags | Users need to distinguish usable, stale, missing, or conflicting data | High | High | Evidence: My and Com specify quality, status, and audit metadata. | **Decision:** Must-have. Trace: My review; Com review. |
+| Area or zone risk context | Users need to identify where attention may be needed | High | High | Evidence: Belle identifies zone risk view; Mod supports population-level context. | **Decision:** Must-have. Trace: Belle review; Mod review. |
+| Vulnerable context overlay | Users need to interpret risk in relation to population context | High | Medium | Evidence: Mod identifies agreed vulnerable contexts. Assumption: first version uses aggregate or mock fields. | **Decision:** Include with privacy boundary. Trace: Mod review; Com review. |
+| High-priority operational signal | A visible risk pattern needs a human-reviewable next step | High | High | Interpretation: signal is a workflow state, not a clinical risk score. | **Decision:** Must-have, label as operational signal. Trace: Mod review; Belle review. |
+| Task creation and assignment | Users need to know who owns the next action | High | High | Evidence: Belle user stories and Chris handoff findings. | **Decision:** Must-have in simulator. Trace: Belle review; Chris review. |
+| Acknowledgement state | Sending a message is not proof of receipt or action | High | High | Evidence: Chris makes acknowledgement a first-class gap. | **Decision:** Must-have. Trace: Chris review; Chris contact matrix. |
+| Fallback and escalation state | Unacknowledged work requires visible next handling | High | Medium | Evidence: Chris requires independent-failure fallback. Assumption: response windows are simulation parameters. | **Decision:** Include as mock state; do not define policy deadline. Trace: Chris channel strategy; June notes. |
+| Separate risk state and task state | Users could confuse severity with completion | High | High | Evidence: Belle explicitly identifies the distinction. | **Decision:** Must-have UI rule. Trace: Belle review. |
+| Role-based coordinator view | Coordinator needs overview, unresolved work, and escalation | High | High | Evidence: Belle and Chris identify coordinator as central role. | **Decision:** Must-have primary view. Trace: Belle review; Chris review. |
+| CHW or field-worker task view | Operational users need a focused task list | Medium | High | Evidence: Belle recommends mobile-first operational view. Assumption: CHW role requires local validation. | **Decision:** Include as concept view. Trace: Belle review; Chris Thailand notes. |
+| Facility status view | Facilities need a limited status/report-up handoff | Medium | Medium | Evidence: Belle and Chris identify facility handoff. Assumption: exact facility workflow is not finalized. | **Decision:** Include contact/status fields only. Trace: Belle review; Chris matrix. |
+| Post-event or post-simulation summary | Teams need to review completion and unresolved gaps | Medium | High | Evidence: June and Chris define feasibility/evaluation measures. | **Decision:** Include. Trace: June notes; Chris evaluation. |
+| Live weather ingestion | Future service needs current data | High | Low | Evidence: My identifies source/API/licence questions; Com supports file-based Phase 0. | **Decision:** Defer to later phase. Trace: My review; Com review; June notes. |
+| Automated alert dispatch | Could support real operations but requires authority and integration | High | Low | Assumption: no final channel/vendor or policy is confirmed. | **Decision:** Out of scope. Trace: Chris strategy; integrated brief out-of-scope list. |
+| Clinical diagnosis or treatment recommendation | Could create clinical safety and validation burden | Low for Phase 0 | Low | Evidence: Mod and June define non-clinical boundary. | **Decision:** Exclude. Trace: Mod review; June notes. |
+| Patient-level risk scoring | Could increase privacy and validation risk | Low for Phase 0 | Low | Evidence: Com and Mod support aggregate/mock data boundary. | **Decision:** Exclude. Trace: Com review; Mod review. |
+| Automated emergency dispatch | Requires production authority and safety validation | Low for Phase 0 | Low | Interpretation: beyond roadmap initiative maturity. | **Decision:** Exclude. Trace: integrated brief section 6. |
