@@ -137,6 +137,29 @@ This scenario demonstrates the gap without claiming that the prototype can diagn
 5. fallback or escalation; and
 6. post-simulation review.
 
+### Reserved extension: health-system strengthening M&E lens
+
+The dashboard requirement concept also provides a useful monitoring and evaluation lens:
+
+```text
+Inputs and processes -> Outputs -> Outcomes -> Impact
+```
+
+The framework identifies possible indicator domains across governance, financing, infrastructure and ICT, health workforce, supply chain, information, service readiness, intervention coverage, equity, financial risk protection, responsiveness, and efficiency.
+
+For HeatShield, this framework is currently a reserved extension rather than a Phase 0 build commitment:
+
+| M&E layer | Possible HeatShield connection | Phase 0 position |
+|---|---|---|
+| Inputs and processes | data sources, governance, ICT, workforce/contact points, information quality | Use source, role, access, provenance, and workflow fields where already available |
+| Outputs | task creation, acknowledgement, facility/contact status, response coverage | Suitable for mock workflow evaluation |
+| Outcomes | intervention coverage, protective behaviour, service utilization, unresolved risk | Open for later evidence and data validation |
+| Impact | health outcomes, equity, social/financial risk protection, responsiveness, efficiency | Do not claim or measure as a Phase 0 outcome |
+
+The diagram also suggests future data sources such as administrative and financial tracking, facility assessments, population-based surveys, clinical reporting systems, and civil registration. These should remain open data-source options until the team confirms their relevance, access, quality, and governance requirements.
+
+This extension helps the team explain how a future HeatShield dashboard could grow from an operational coordination view into a broader health-system monitoring view. It does not require a finance module, national coverage, or health-outcome attribution in the first prototype.
+
 ### Supporting components
 
 The other five components remain at contact-point level only:
@@ -160,6 +183,7 @@ The other five components remain at contact-point level only:
 - Mock task, owner, acknowledgement, fallback, and escalation states.
 - Concept views for CHW and facility contacts.
 - Feasibility, usability, clarity, task completion, acknowledgement, and traceability evaluation.
+- Reserved M&E framing for future inputs, outputs, outcomes, and impact indicators.
 
 ### Out of scope
 
@@ -223,7 +247,8 @@ Ask the committee to validate the primary user, indicators, vulnerable contexts,
 5. Which handoffs are essential to show while keeping the five supporting components lightweight?
 6. Which roles should have access to each dashboard view, and what information should remain restricted?
 7. What geographic, population, temporal, and workflow coverage is realistic for the Phase 0 demonstration?
-8. What local evidence, threshold authority, data access, and stakeholder ownership would be required before a live pilot?
+8. Should the future roadmap include a health-system M&E view covering service readiness, coverage, equity, and financial risk protection?
+9. What local evidence, threshold authority, data access, and stakeholder ownership would be required before a live pilot?
 
 ## 10. Closing Statement
 
@@ -242,5 +267,6 @@ This concise proposal is synthesized from:
 - `00_raw_materials/06_June/June_evidence_review_notes.docx`
 - `04_production_inputs/pitch1_integrated_problem_state_brief_2026-08-21.md`
 - `04_production_inputs/pitch1_origin_problem_motivation_brief_2026-08-21.md`
+- `00_raw_materials/dashboard requirement concept.png`
 
 Detailed citations should be added to the final slides from the original source files listed in the member inventories.
