@@ -160,6 +160,36 @@ The diagram also suggests future data sources such as administrative and financi
 
 This extension helps the team explain how a future HeatShield dashboard could grow from an operational coordination view into a broader health-system monitoring view. It does not require a finance module, national coverage, or health-outcome attribution in the first prototype.
 
+### Stakeholder ecosystem and related system levels
+
+Heat-health action involves more than the people who receive an alert. HeatShield sits within an ecosystem of policy, data, health, community, logistics, finance, and population actors:
+
+| System level | Stakeholder or related system | Relationship to HeatShield | Phase 0 representation |
+|---|---|---|---|
+| Global | WHO, WMO, Lancet Countdown, global digital-health frameworks | evidence, standards, indicators, and M&E framing | source and framework references |
+| National | health ministry, meteorological service, disaster-management authority, national data and policy units | national warning, policy, governance, and data sources | source/authority fields and open validation items |
+| Provincial or regional | provincial health office, regional command, regional health and emergency coordination | translate national direction into regional coordination | stakeholder and handoff concept |
+| District or local | district public-health coordinator, local health office, local government | primary operational interpretation and task coordination | main user and coordinator view |
+| Healthcare workforce | clinicians, nurses, CHWs, อสม., EMS, facility managers, pharmacy and supply staff | receive, interpret, act on, or report a task/status | role-based concept views and contact points |
+| Non-health workforce | meteorological staff, employers, schools, community leaders, NGOs, utilities, telecom, media, transport and logistics | provide exposure context, delivery, access, infrastructure, or fallback support | contact-point and dependency fields |
+| Finance and administration | budget owners, finance/accounting, procurement, insurers or funders, administrative data teams | resource allocation, purchasing, financial tracking, and accountability | future data-source and governance option; no finance module in Phase 0 |
+| Population and caregivers | older adults, infants and caregivers, outdoor workers, people with chronic disease, people living alone, residents | affected population and intended beneficiaries | aggregate or mock context; no identifiable registry |
+
+The related systems may include climate and weather data, public-health surveillance, facility readiness, administrative and financial tracking, communication systems, logistics, civil registration, and future interoperability services. The project should present these as connected system boundaries and stakeholders, not as systems HeatShield will replace.
+
+### Platform opportunity across the health continuum
+
+The broader opportunity is a **climate-health coordination and assistance platform** that uses shared evidence and workflow to support four health-service dimensions:
+
+| Dimension | Future platform opportunity | HeatShield Phase 0 boundary |
+|---|---|---|
+| Promotion | consistent health information, heat literacy, targeted communication, and community awareness | show information and contact-point requirements only |
+| Prevention | identify vulnerable contexts, coordinate outreach, monitor readiness, and review coverage | demonstrate evidence-to-task coordination with mock data |
+| Treatment | connect an operational signal to healthcare, facility, or emergency-service handoff | show contact point and escalation concept; no clinical decision rules |
+| Recovery | post-event review, unresolved-task follow-up, resource learning, and policy improvement | show summary and review fields; do not measure health impact |
+
+Policy, legal requirements, data governance, financing, accessibility, and accountability are cross-cutting conditions for all four dimensions. They are roadmap opportunities and validation questions, not production claims in Pitch 1.
+
 ### Supporting components
 
 The other five components remain at contact-point level only:
@@ -236,7 +266,7 @@ Show historical aggregate data, mock workflow, provenance, privacy boundary, rol
 
 ### Slide 7 - Feedback Requested
 
-Ask the committee to validate the primary user, indicators, vulnerable contexts, access model, coverage boundary, operational signal definition, essential handoffs, and requirements for a future live phase.
+Ask the committee to validate the primary user, stakeholder/system levels, indicators, vulnerable contexts, access model, coverage boundary, operational signal definition, essential handoffs, and the future platform opportunity across promotion, prevention, treatment, and recovery.
 
 ## 9. Decision Questions for the Committee
 
@@ -247,8 +277,9 @@ Ask the committee to validate the primary user, indicators, vulnerable contexts,
 5. Which handoffs are essential to show while keeping the five supporting components lightweight?
 6. Which roles should have access to each dashboard view, and what information should remain restricted?
 7. What geographic, population, temporal, and workflow coverage is realistic for the Phase 0 demonstration?
-8. Should the future roadmap include a health-system M&E view covering service readiness, coverage, equity, and financial risk protection?
-9. What local evidence, threshold authority, data access, and stakeholder ownership would be required before a live pilot?
+8. Which stakeholders and related systems must be represented at global, national, regional, district, facility, community, and population levels?
+9. Should the future roadmap extend from coordination into promotion, prevention, treatment handoff, and recovery review?
+10. What local evidence, threshold authority, data access, and stakeholder ownership would be required before a live pilot?
 
 ## 10. Closing Statement
 
