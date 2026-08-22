@@ -54,6 +54,64 @@ The project is not primarily about producing another weather display. It is abou
 - fallback and escalation visibility; and
 - Phase 0 evaluation and implementation readiness.
 
+### How the problem elements are related
+
+These are connected parts of one problem chain, not separate project topics:
+
+```text
+Heat-health burden
+-> unequal exposure and vulnerable contexts
+-> fragmented data, roles, and communication channels
+-> unclear ownership and incomplete handoffs
+-> limited visibility of action and coverage
+-> alert-to-action gap
+-> need for a coordinated information layer
+```
+
+The dashboard is therefore positioned between evidence and action. It does not replace the health system, communication channels, or responsible staff. It makes the relevant context, next contact point, task state, acknowledgement, and unresolved coverage visible to the coordinator.
+
+### Access model at requirement level
+
+Access should be role-based and limited to the information needed for each task:
+
+| User | Intended access | Information visible in Phase 0 |
+|---|---|---|
+| District-level public-health coordinator | Authenticated web dashboard | Aggregate risk context, trends, source metadata, tasks, acknowledgement, and unresolved work |
+| CHW or local contact | Mobile-friendly assigned-task view | Tasks assigned to the role, status update, acknowledgement, and fallback request |
+| Facility contact | Restricted facility view | Facility recipient status and handoff confirmation |
+| Resident or caregiver | Future simplified public or support view | General guidance or contact information; not part of the core Phase 0 workflow |
+| Data administrator | Restricted upload and quality-control access | Source files, provenance, freshness, and validation flags |
+
+The project should test whether the intended users can find the source, identify the affected area, understand the operational signal, and update or interpret task status. It should not claim that production access, authentication, or local permissions have already been validated.
+
+### Coverage boundary at requirement level
+
+Coverage is defined across several dimensions rather than as a claim that the system covers everyone:
+
+| Coverage dimension | Phase 0 position |
+|---|---|
+| Population | Five vulnerable contexts are considered, but chronic disease and living alone remain mock or future local-linkage fields unless approved aggregate data is available |
+| Geography | Demonstration area or district-level concept; not a claim of nationwide coverage |
+| Time | Historical aggregate evidence and mock workflow states; current and forecast integration remain future extensions |
+| Workflow | Evidence review, operational signal, task, handoff, acknowledgement, fallback, and post-simulation review |
+| Communication | Contact points and fallback are represented; the dashboard is not the only delivery channel |
+| System integration | File-based or mock ingestion in Phase 0; no live EHR, hospital, or meteorological API dependency |
+
+The coverage question for Pitch 1 is therefore:
+
+> Can a limited district-level prototype make evidence, access, ownership, and response coverage visible enough to identify what should be validated in a future live phase?
+
+### Open validation items
+
+The following items are intentionally left open for feedback rather than presented as completed decisions:
+
+- final primary-user organization and local role ownership;
+- the first demonstration geography and its appropriate data resolution;
+- which vulnerable contexts can be supported by approved aggregate data;
+- access and authentication arrangements for a future pilot;
+- which contact points are essential for the first workflow demonstration; and
+- what evidence is required before current, forecast, or live data are introduced.
+
 ## 4. A Simple Scenario
 
 > District A shows a concerning historical heat-health trend. The coordinator can see the indicator, source, period, and vulnerable context, but the current information view does not make the next owner, acknowledgement status, fallback route, or unresolved task visible in one place.
@@ -150,11 +208,11 @@ Introduce the retrospective dashboard plus mock workflow simulator.
 
 ### Slide 6 - Phase 0 Boundary
 
-Show historical aggregate data, mock workflow, provenance, privacy boundary, and feasibility evaluation. State clearly what is deferred.
+Show historical aggregate data, mock workflow, provenance, privacy boundary, role-based access, coverage boundary, and feasibility evaluation. State clearly what is deferred.
 
 ### Slide 7 - Feedback Requested
 
-Ask the committee to validate the primary user, indicators, vulnerable contexts, operational signal definition, essential handoffs, and requirements for a future live phase.
+Ask the committee to validate the primary user, indicators, vulnerable contexts, access model, coverage boundary, operational signal definition, essential handoffs, and requirements for a future live phase.
 
 ## 9. Decision Questions for the Committee
 
@@ -163,7 +221,9 @@ Ask the committee to validate the primary user, indicators, vulnerable contexts,
 3. Which vulnerable contexts should appear in the first demonstration?
 4. What should a coordinator review before creating a high-priority operational signal?
 5. Which handoffs are essential to show while keeping the five supporting components lightweight?
-6. What local evidence, threshold authority, data access, and stakeholder ownership would be required before a live pilot?
+6. Which roles should have access to each dashboard view, and what information should remain restricted?
+7. What geographic, population, temporal, and workflow coverage is realistic for the Phase 0 demonstration?
+8. What local evidence, threshold authority, data access, and stakeholder ownership would be required before a live pilot?
 
 ## 10. Closing Statement
 
