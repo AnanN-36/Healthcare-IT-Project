@@ -21,5 +21,6 @@ For this project, the first production inputs should be limited to the Heat Risk
 - contact-point and handoff content for the five supporting components
 - one or more demo scenarios
 - Phase 0 roadmap and evaluation measures
+- Pitch 1 problem-to-solution narrative script
 
 Do not place clinical treatment rules, real personal data, or unverified alert thresholds here.
