@@ -22,5 +22,6 @@ For this project, the first production inputs should be limited to the Heat Risk
 - one or more demo scenarios
 - Phase 0 roadmap and evaluation measures
 - Pitch 1 problem-to-solution narrative script
+- Pitch 1 Chapter 1 introduction essay
 
 Do not place clinical treatment rules, real personal data, or unverified alert thresholds here.
