@@ -24,33 +24,43 @@ This project therefore approaches heat-health as a Global Health Issue and a Hea
 
 The central problem is that heat-health evidence and alerts can exist without a shared, traceable operational layer that shows what the signal means for a particular area or vulnerable context, who owns the next step, whether the handoff was acknowledged, and what remains unresolved.
 
-The information journey required for coordinated heat-health action can be represented as follows:
+The information journey required for coordinated heat-health action is shown in Figure 1.
 
-```text
-Heat and health evidence
--> interpretation of risk context
--> prioritization for attention
--> assignment of a responsible role
--> communication and handoff
--> acknowledgement and action
--> review of unresolved work
+```mermaid
+flowchart LR
+    A["Heat and health evidence"] --> B["Interpret risk context"]
+    B --> C["Prioritize for attention"]
+    C --> D["Assign responsible role"]
+    D --> E["Communicate and hand off"]
+    E --> F["Acknowledge and act"]
+    F --> G["Review unresolved work"]
 ```
+
+**Figure 1. Information journey required for coordinated heat-health action.**
+
+The figure shows that the dashboard is positioned within a chain of interpretation and coordination. It is not intended to replace the source systems or the people responsible for action.
 
 In practice, these stages may be separated across data sources, departments, organizations, and communication channels. A source may provide a valid indicator but not an operational owner. A dashboard may show a map or risk level but not a task. A message may be sent without confirmation that it was received or acknowledged. A task may be acknowledged without evidence that the action was completed. If a communication channel fails, the fallback route may be unclear or may depend on the same infrastructure.
 
 These conditions create an alert-to-action gap. The gap does not necessarily mean that data or warnings are absent. Rather, it means that information is not consistently connected to a visible and accountable workflow. As a result, public-health and healthcare teams may need to reconcile multiple sources manually, repeat communication, spend time clarifying responsibility, or remain uncertain about unresolved work after a response period.
 
-The problem can therefore be summarized as a connected chain:
+The problem can therefore be summarized as the connected chain shown in Figure 2.
 
-```text
-Heat-health burden
--> unequal exposure and vulnerability
--> fragmented information
--> unclear prioritization and ownership
--> incomplete handoff
--> invisible unresolved work
--> alert-to-action gap
+```mermaid
+flowchart LR
+    A["Heat-health burden"] --> B["Unequal exposure and vulnerability"]
+    B --> C["Fragmented information"]
+    C --> D["Unclear prioritization and ownership"]
+    D --> E["Incomplete handoff"]
+    E --> F["Invisible unresolved work"]
+    F --> G["Alert-to-action gap"]
+    classDef problem fill:#fff3cd,stroke:#9a6700,color:#3d2b00;
+    class A,B,C,D,E,F,G problem;
 ```
+
+**Figure 2. Connected problem chain from heat-health burden to the alert-to-action gap.**
+
+The arrows indicate that the problems are related stages rather than independent issues. A weakness in one stage can make the next stage less visible or less accountable.
 
 The project does not assume that existing heat-risk tools are ineffective. Risk displays and public dashboards can provide valuable information about historical burden, current conditions, geographic variation, or public guidance. However, a risk display alone does not necessarily answer the operational questions that follow: Who reviews this information? Who owns the next task? Was the handoff acknowledged? What happens if the first channel fails? Is the task complete, escalated, or unresolved?
 
@@ -90,18 +100,53 @@ HeatShield proposes a retrospective Heat Risk Dashboard combined with a mock wor
 
 After reviewing the evidence, the coordinator can create a high-priority operational signal for human review. The term operational signal is intentional: the prototype will support coordination and prioritization, not clinical diagnosis or individual medical risk prediction. The signal can lead to a simulated task with an owner, assignee, priority, and status.
 
-The simulated workflow will represent the following sequence:
+The simulated workflow will represent the timeline shown in Figure 3.
 
-```text
-Evidence review
--> human-reviewed operational signal
--> task creation
--> owner and assignee
--> handoff
--> acknowledgement
--> action, fallback, or escalation
--> post-simulation review
+```mermaid
+flowchart LR
+    A["1. Evidence review"] --> B["2. Human-reviewed<br/>operational signal"]
+    B --> C["3. Task creation"]
+    C --> D["4. Owner and assignee"]
+    D --> E["5. Handoff"]
+    E --> F["6. Acknowledgement"]
+    F --> G["7. Action"]
+    G --> H["8. Fallback or escalation<br/>if unresolved"]
+    H --> I["9. Post-simulation review"]
+    classDef review fill:#e8f4fd,stroke:#1769aa,color:#0b2e4f;
+    classDef action fill:#eaf7ea,stroke:#2e7d32,color:#173b19;
+    classDef exception fill:#fff3cd,stroke:#9a6700,color:#3d2b00;
+    class A,B,I review;
+    class C,D,E,F,G action;
+    class H exception;
 ```
+
+**Figure 3. HeatShield mock workflow timeline from evidence review to post-simulation review.**
+
+The fallback or escalation stage is conditional. It is shown as part of the workflow because an operational design must make unresolved work visible rather than treating message transmission as completion.
+
+The decision logic for the operational signal and handoff is shown in Figure 4.
+
+```mermaid
+flowchart TD
+    A["Review historical evidence"] --> B{"Are source, period, unit,<br/>geography, and quality status clear?"}
+    B -- "No" --> C["Flag missing or uncertain context<br/>Do not promote to a strong signal"]
+    B -- "Yes" --> D{"Is the pattern relevant to<br/>the selected population context?"}
+    D -- "No or unclear" --> E["Record uncertainty<br/>Request human review"]
+    D -- "Yes" --> F["Create high-priority<br/>operational signal"]
+    F --> G["Assign owner and recipient"]
+    G --> H{"Has the handoff been acknowledged?"}
+    H -- "Yes" --> I["Record action status<br/>and completion"]
+    H -- "No" --> J["Use independent fallback<br/>or escalation route"]
+    J --> K["Record unresolved status<br/>for post-event review"]
+    classDef decision fill:#f4ecff,stroke:#6f42c1,color:#2f1b4f;
+    classDef caution fill:#fff3cd,stroke:#9a6700,color:#3d2b00;
+    class B,D,H decision;
+    class C,E,J,K caution;
+```
+
+**Figure 4. Illustrative decision logic for converting evidence into an accountable operational workflow.**
+
+This figure is a design logic for the prototype, not an official warning threshold or clinical protocol. The decision points require human review and local validation before any future live implementation.
 
 The workflow will distinguish between sending a message, receiving it, acknowledging it, taking action, and completing the task. It will also separate heat-risk state from task state. A high-priority risk state does not mean that the response task is complete, and a completed task does not mean that the heat risk has disappeared.
 
@@ -141,17 +186,25 @@ The project is not expected to prove health outcome improvement. Its Phase 0 con
 
 ## 1.11 Working Conceptual Framework
 
-The conceptual direction of the initiative can be summarized as:
+The conceptual direction of the initiative is shown in Figure 5.
 
-```text
-Global and local heat-health evidence
--> data context and quality interpretation
--> aggregate vulnerability context
--> human-reviewed operational signal
--> accountable task and handoff
--> acknowledgement, fallback, and escalation
--> post-event review and future learning
+```mermaid
+flowchart LR
+    A["Global and local<br/>heat-health evidence"] --> B["Data context and<br/>quality interpretation"]
+    B --> C["Aggregate vulnerability<br/>context"]
+    C --> D["Human-reviewed<br/>operational signal"]
+    D --> E["Accountable task<br/>and handoff"]
+    E --> F["Acknowledgement,<br/>fallback, and escalation"]
+    F --> G["Post-event review<br/>and future learning"]
+    classDef evidence fill:#e8f4fd,stroke:#1769aa,color:#0b2e4f;
+    classDef workflow fill:#eaf7ea,stroke:#2e7d32,color:#173b19;
+    classDef learning fill:#f4ecff,stroke:#6f42c1,color:#2f1b4f;
+    class A,B,C evidence;
+    class D,E,F workflow;
+    class G learning;
 ```
+
+**Figure 5. Working conceptual framework connecting global-health evidence to IT-enabled coordination.**
 
 The framework connects the public-health problem with the IT management intervention. Heat-health evidence establishes the need. Data context and vulnerability information support interpretation. The dashboard makes the relevant information accessible to the intended role. The workflow simulator tests whether information can be connected to ownership, communication, acknowledgement, fallback, and review. The results inform the next phase without claiming that the prototype itself produces clinical or population-health impact.
 
@@ -189,4 +242,3 @@ The following questions remain open for discussion with the team, instructor, an
 | Consolidated design decisions and boundaries | `03_matrices/feature_feasibility_impact_matrix.md`; `data_requirement_matrix.md`; `stakeholder_ecosystem_matrix.md`; `risk_governance_matrix.md`; `roadmap_decision_log.md` |
 
 Detailed citations for final academic submission should be added from the original source documents. This chapter draft is a synthesized introduction based on the project's current evidence and design matrices.
-
